@@ -90,25 +90,104 @@ document.querySelectorAll('.publication-item').forEach((item, index) => {
     item.style.transitionDelay = `${index * 0.1}s`;
 });
 
-// Form submission
+// Form submission with EmailJS
 const contactForm = document.getElementById('contact-form');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+if (contactForm) {
+    const submitButton = contactForm.querySelector('button[type="submit"]');
     
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    // Initialize EmailJS when page loads
+    window.addEventListener('DOMContentLoaded', () => {
+        if (typeof emailjs !== 'undefined') {
+            // Initialize EmailJS with your Public Key
+            emailjs.init("TinKeQCquuA1UqkJr");
+        }
+    });
     
-    // Simple validation
-    if (name && email && message) {
-        // Here you would typically send the data to a server
-        // For now, we'll just show an alert
-        alert('Thank you for your message! I will get back to you soon.');
-        contactForm.reset();
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Check if EmailJS is loaded
+        if (typeof emailjs === 'undefined') {
+            showMessage('Email service is not configured. Please contact me directly at yukktas@bu.edu', 'error');
+            return;
+        }
+        
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        // Simple validation
+        if (!name || !email || !message) {
+            showMessage('Please fill in all fields.', 'error');
+            return;
+        }
+        
+        // Show loading state
+        const originalButtonText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+        
+        try {
+            // Send email using EmailJS
+            await emailjs.send(
+                'service_oti2ryt',    // Your EmailJS Service ID
+                'template_bepqykj',   // Your EmailJS Template ID
+                {
+                    from_name: name,
+                    from_email: email,
+                    message: message,
+                    to_email: 'yukktas@bu.edu' // Your email address
+                }
+            );
+            
+            // Success
+            showMessage('Thank you for your message! I will get back to you soon.', 'success');
+            contactForm.reset();
+        } catch (error) {
+            // Error
+            console.error('EmailJS Error:', error);
+            showMessage('Sorry, there was an error sending your message. Please try again or email me directly at yukktas@bu.edu', 'error');
+        } finally {
+            // Reset button state
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+        }
+    });
+}
+
+// Function to show success/error messages
+function showMessage(text, type) {
+    // Remove any existing message
+    const existingMessage = document.querySelector('.form-message');
+    if (existingMessage) {
+        existingMessage.remove();
     }
-});
+    
+    // Create message element
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `form-message ${type}`;
+    messageDiv.textContent = text;
+    messageDiv.style.cssText = `
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 8px;
+        font-weight: 500;
+        ${type === 'success' 
+            ? 'background: #d4edda; color: #155724; border: 1px solid #c3e6cb;' 
+            : 'background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;'
+        }
+    `;
+    
+    // Insert after the form
+    contactForm.parentNode.insertBefore(messageDiv, contactForm.nextSibling);
+    
+    // Remove message after 5 seconds
+    setTimeout(() => {
+        messageDiv.remove();
+    }, 5000);
+}
 
 // Add parallax effect to hero section
 window.addEventListener('scroll', () => {
