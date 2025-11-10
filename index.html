@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yukkta Seelam - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Yukkta Seelam</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hi there! I'm</span>
+                        <span class="name">Yukkta Seelam</span>
+                    </h1>
+                    <p class="hero-subtitle">Robotics & AI Engineer</p>
+                    <p class="hero-description">
+                        Robotics & AI Engineer passionate about developing intelligent systems that bridge perception, control, and real-world deployment.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="Yukkta_Seelam.pdf" target="_blank" class="btn btn-primary">View Resume</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="IMG_1437.jpg" alt="Profile" id="profile-image" onerror="this.onerror=null; this.src='IMG_1437.HEIC'; this.onerror=function(){this.style.display='none'; this.nextElementSibling.style.display='flex';};">
+                        <div class="image-placeholder" style="display:none;">
+                            <p>Image: IMG_1437.HEIC</p>
+                            <p class="image-note">Note: Please convert HEIC to JPG/PNG for browser compatibility</p>
+                            <p class="image-note">Run: chmod +x convert-image.sh && ./convert-image.sh</p>
+                        </div>
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm pursuing my Master's in Robotics and Autonomous Systems at Boston University, focusing on Reinforcement Learning, Computer Vision, and Autonomous Systems. My most recent experience was with Red Hat, where I developed efficient real-world reinforcement learning systems using hybrid local-cloud inference.
+                    </p>
+                    <p class="about-intro">
+                        Currently based in Boston, MA, I'm actively seeking full-time opportunities in Robotics, AI, Machine Learning, and Automation. I aim to apply data-driven intelligence to create systems that learn and adapt in dynamic environments. I'm open to relocation and thrive in collaborative teams that value innovation and creative problem-solving.
+                    </p>
+                    <p class="about-intro">
+                        Outside of engineering, I enjoy solving puzzles, participating in brainstorming sessions, playing basketball, and not-so-friendly Catan. I value strategic thinking both professionally and in my hobbies. I'm always up for a good challenge, whether it's debugging reinforcement learning policies or trading sheep for wood.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Boston University</h3>
+                    <p class="degree">M.S. in Robotics and Autonomous Systems (2026)</p>
+                    <div class="education-details">
+                        <div class="education-section">
+                            <h4>Activities & Involvements</h4>
+                            <ul>
+                                <li>Student Ambassador — Robotics & Autonomous Systems (RAS) Program</li>
+                                <li>Teaching Assistant — EK131: Introduction to Engineering: Hands On</li>
+                                <li>Teaching Assistant — ME310: Instrumentation for Mechanical and Electrical Engineers</li>
+                                <li>Researcher — Red Hat x BU Collaboration on Hybrid Local-Cloud Reinforcement Learning</li>
+                            </ul>
+                        </div>
+                        <div class="education-section">
+                            <h4>Relevant Coursework</h4>
+                            <ul>
+                                <li>Deep Reinforcement Learning</li>
+                                <li>Machine Learning</li>
+                                <li>Deep Learning</li>
+                                <li>Soft Robotics</li>
+                                <li>Dynamic Control Theory</li>
+                                <li>Image and Video Processing</li>
+                                <li>Game Theory</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <h3>Indian Institute of Technology, Kanpur</h3>
+                    <p class="degree">B.Tech in Electrical Engineering (2024)</p>
+                    <div class="education-details">
+                        <div class="education-section">
+                            <h4>Activities & Involvements</h4>
+                            <ul>
+                                <li>Team Head — Robotics Club, Science & Technology Council</li>
+                                <li>Captain — Basketball Team, Games & Sports Council</li>
+                                <li>President — Toastmasters IIT Kanpur</li>
+                            </ul>
+                        </div>
+                        <div class="education-section">
+                            <h4>Relevant Coursework</h4>
+                            <ul>
+                                <li>Control Systems</li>
+                                <li>Artificial Intelligence</li>
+                                <li>Embedded Systems</li>
+                                <li>Probability & Statistics</li>
+                                <li>CAD Modelling & Manufacturing</li>
+                                <li>Modern Cryptology</li>
+                                <li>ML for Signal Processing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category-card">
+                    <h3 class="skill-category-title">Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3 class="skill-category-title">ML & AI Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">XGBoost</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3 class="skill-category-title">Robotics & Simulation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ROS</span>
+                        <span class="skill-tag">Gazebo</span>
+                        <span class="skill-tag">RViz</span>
+                        <span class="skill-tag">CARLA</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">SLAM</span>
+                        <span class="skill-tag">Control Systems</span>
+                        <span class="skill-tag">Path Planning</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3 class="skill-category-title">Hardware & Design</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Fusion 360</span>
+                        <span class="skill-tag">SolidWorks</span>
+                        <span class="skill-tag">Eagle</span>
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">Embedded Systems</span>
+                        <span class="skill-tag">3D Printing</span>
+                        <span class="skill-tag">CAD/CAM</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3 class="skill-category-title">Manufacturing Processes</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Prototyping</span>
+                        <span class="skill-tag">Testing</span>
+                        <span class="skill-tag">Mechanical Assembly</span>
+                        <span class="skill-tag">PCB Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <p class="section-subtitle">My journey of designing intelligent systems and advancing from research to real-world deployment.</p>
+            <div class="experience-grid">
+                <a href="experience-1.html" class="experience-card-link">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3>Researcher</h3>
+                            <span class="experience-company">@ Red Hat x Boston University</span>
+                        </div>
+                        <p class="experience-dates">May 2025 - Present</p>
+                        <p class="experience-description">Worked on the Hybrid Local-Cloud Reinforcement Learning (UniLCD) project focused on optimizing real-world RL systems for latency, safety, and efficiency in autonomous driving environments.</p>
+                        <div class="experience-tags">
+                            <span class="tag">Reinforcement Learning</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">CARLA</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Policy Optimization</span>
+                            <span class="tag">Stable-Baselines3</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="experience-2.html" class="experience-card-link">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3>ML & AI Intern</h3>
+                            <span class="experience-company">@ Samsung Research & Development Institute</span>
+                        </div>
+                        <p class="experience-dates">May 2023 - Aug 2023</p>
+                        <p class="experience-description">Contributed to the development of an autonomous robotic vacuum cleaner by designing and testing perception modules for object detection and obstacle avoidance using sensor and vision data.</p>
+                        <div class="experience-tags">
+                            <span class="tag">Robotics</span>
+                            <span class="tag">TensorRT</span>
+                            <span class="tag">ONNX</span>
+                            <span class="tag">RefineDet</span>
+                            <span class="tag">YOLO</span>
+                            <span class="tag">Object Detection</span>
+                            <span class="tag">Obstacle Avoidance</span>
+                            <span class="tag">Simulation</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="experience-3.html" class="experience-card-link">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3>Cloud Intern</h3>
+                            <span class="experience-company">@ Samsung Research & Development Institute</span>
+                        </div>
+                        <p class="experience-dates">May 2022 - Aug 2022</p>
+                        <p class="experience-description">Automated IP whitelisting using AWS Lambda and SNS, enhancing system security and operational efficiency.</p>
+                        <div class="experience-tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">SNS Triggers</span>
+                            <span class="tag">Lambda Function</span>
+                            <span class="tag">S3 Bucket</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title">Publications & Awards</h2>
+            <div class="publications-container">
+                <div class="publication-items">
+                    <div class="publication-item">
+                        <span class="publication-category-label">Publications</span>
+                        <h4 class="publication-title">Towards Autonomous Shooting Rover via Situation Aware Visual-Perception and Dynamic Action Execution</h4>
+                        <p class="publication-venue">2024 IEEE/SICE International Symposium on System Integration (SII)</p>
+                        <a href="https://ieeexplore.ieee.org/document/10417488" target="_blank" rel="noopener noreferrer" class="publication-link">View Publication</a>
+                    </div>
+                    <div class="publication-item">
+                        <span class="publication-category-label">Poster</span>
+                        <h4 class="publication-title">Design of AI Ground Robots for Intelligent Combat in a Dynamic Arena</h4>
+                        <p class="publication-venue">DJI Robomaster AI Challenge - ICRA 2022</p>
+                        <a href="Poster-DJI-ICRA2022.pdf" target="_blank" rel="noopener noreferrer" class="publication-link">View Poster</a>
+                    </div>
+                    <div class="publication-item">
+                        <span class="publication-category-label">Awards</span>
+                        <h4 class="publication-title">3rd Place, DJI Robomaster AI Challenge</h4>
+                        <p class="publication-venue">IEEE ICRA DJI · May 2022</p>
+                        <div class="publication-links">
+                            <a href="award-1.html" class="publication-link">View</a>
+                            <a href="https://www.youtube.com/watch?v=U3kv0PN-7x0" target="_blank" rel="noopener noreferrer" class="publication-link">View Video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>RL-Cleaning</h3>
+                        <p>Cleaning Robot using 4 different RL algorithms</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Yukkta-Seelam/RL-Cleaning" target="_blank" rel="noopener noreferrer" class="project-link">View Repo</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">View Demo</a>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Reinforcement Learning</span>
+                            <span class="tag">Robotics</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Sleep-Apnea-Detection</h3>
+                        <p>Detection of Sleep Apnea using Medical Data</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Yukkta-Seelam/Sleep-Apnea-Detection" target="_blank" rel="noopener noreferrer" class="project-link">View Repo</a>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Medical Data</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>ArmorPlate-Classification</h3>
+                        <p>Code structure to classify the different armor plates.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Yukkta-Seelam/ArmorPlate-Classification" target="_blank" rel="noopener noreferrer" class="project-link">View Repo</a>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Classification</span>
+                            <span class="tag">Robotics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Armor-Plate-Dataset</h3>
+                        <p>Includes images of the different armor plates - used for object detection with 8 classes</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Yukkta-Seelam/Armor-Plate-Dataset" target="_blank" rel="noopener noreferrer" class="project-link">View Repo</a>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Dataset</span>
+                            <span class="tag">Object Detection</span>
+                            <span class="tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Localization</h3>
+                        <p>Robot localization and mapping implementation</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Yukkta-Seelam/Localization" target="_blank" rel="noopener noreferrer" class="project-link">View Repo</a>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">SLAM</span>
+                            <span class="tag">Robotics</span>
+                            <span class="tag">Localization</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>ICRA DJI</h3>
+                        <p>DJI Robomaster AI Challenge - ICRA 2022 competition project</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Yukkta-Seelam/ICRA-DJI" target="_blank" rel="noopener noreferrer" class="project-link">View Repo</a>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Robotics</span>
+                            <span class="tag">AI Challenge</span>
+                            <span class="tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Sentimental-AI</h3>
+                        <p>Liesure Project 2021</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Yukkta-Seelam/Sentimental-AI" target="_blank" rel="noopener noreferrer" class="project-link">View Repo</a>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Sentiment Analysis</span>
+                            <span class="tag">Jupyter Notebook</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro">
+                        I'm always open to discussing new projects, 
+                        creative ideas, or opportunities to be part of your vision.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:yukktas@bu.edu" class="contact-link">yukktas@bu.edu</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p><a href="https://www.linkedin.com/in/yukkta-seelam-20306b213/" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin.com/in/yukkta-seelam-20306b213</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p><a href="https://github.com/Yukkta-Seelam" target="_blank" rel="noopener noreferrer" class="contact-link">github.com/Yukkta-Seelam</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
