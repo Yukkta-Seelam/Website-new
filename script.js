@@ -109,7 +109,7 @@ if (contactForm) {
         
         // Check if EmailJS is loaded
         if (typeof emailjs === 'undefined') {
-            showMessage('Email service is not configured. Please contact me directly at yukktas@bu.edu', 'error');
+            showMessage('Email service is not configured. Please contact me directly at yukktaseelam54@gmail.com', 'error');
             return;
         }
         
@@ -138,7 +138,7 @@ if (contactForm) {
                     from_name: name,
                     from_email: email,
                     message: message,
-                    to_email: 'yukktas@bu.edu' // Your email address
+                    to_email: 'yukktaseelam54@gmail.com' // Your email address
                 }
             );
             
@@ -148,7 +148,7 @@ if (contactForm) {
         } catch (error) {
             // Error
             console.error('EmailJS Error:', error);
-            showMessage('Sorry, there was an error sending your message. Please try again or email me directly at yukktas@bu.edu', 'error');
+            showMessage('Sorry, there was an error sending your message. Please try again or email me directly at yukktaseelam54@gmail.com', 'error');
         } finally {
             // Reset button state
             submitButton.textContent = originalButtonText;
